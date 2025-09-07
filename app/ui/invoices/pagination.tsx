@@ -16,13 +16,10 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
     const result = `${pathname}?${params.toString()}`;
-    console.log("result", result);
     return result;
   };
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
-
       <div className="inline-flex">
         <PaginationArrow
           direction="left"
